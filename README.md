@@ -1,27 +1,123 @@
-# FireKenyaCloud
+![bg right](https://images.unsplash.com/photo-1730524204887-6ef76cc83b5f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w1NTU5NjN8MHwxfHNlYXJjaHwxN3x8RmlyYmFzZSUyMEZ1bmN0aW9ucyUyMGluQW5ndWxhcnxlbnwwfDF8fHwxNzQzMDAzMTA2fDA&ixlib=rb-4.0.3&q=85)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.6.
+# Serveless Api with Firebase Functions
 
-## Development server
+Mandela Winnie
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+---
 
-## Code scaffolding
+# Bio About Firebase
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Began as a chat solution , 'Evolve'
+- Accquired later by  Google
+- Other features such as Auth, Firestore,Analytics,Helpers and Utilities
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+---
 
-## Running unit tests
+# Introduction to Firebase Functions
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- Run on the server side of code  (Serverless)
+- Triggered mainly by  firebase features or http requests
+- Function  as a service 
+- Supports multiple programming languages(Typescript)
 
-## Running end-to-end tests
+---
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+# Versions of Firebase Functions
 
-## Further help
+- Two versions of   firebase functions
+  - V1
+  - V2 
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+---
+
+# V1
+
+- Container Registry  or Artifact Registry 
+- Request time out to up  to 9 minutes 
+- Up to 8GB  ram  with 2 vcPU
+- 1 concurrent request per function instance
+
+
+---
+
+# V2
+- Artifact Registry  only
+
+- Up to 60 minutes  for HTTP triggered functions
+-  Request time out to up  to 9 minutes for  event-triggered functions 
+- Up to 16GB  ram  with 4 vcPU
+
+- Upto  1000 concurrent requests per function instance
+
+
+
+---
+
+# Setting Up Firebase Functions
+
+```bash
+# set up an angular project 
+ng new projectName
+
+# install angular Fire 
+ng add @angular/fire
+
+```
+---
+
+# Setting Up Firebase Functions
+
+```bash
+
+# Install Firebase CLI
+npm install -g firebase-tools
+
+# Initialize Firebase project
+firebase init functions
+```
+---
+
+# Writing Firebase Functions
+
+Demo
+
+---
+
+# Deploying Firebase Functions
+
+- Use Firebase CLI for deployment
+- Deploy individual functions
+- Deploy all functions at once
+- Monitor deployment status
+- Rollback to previous versions
+- View deployment logs
+
+```bash
+# Deploy all functions
+firebase deploy --only functions
+```
+
+---
+
+# Integrating with Angular
+
+```typescript
+// Import Firebase module
+import { AngularFireFunctions } from '@angular/fire/functions';
+
+// Call a Firebase Function
+this.functions.httpsCallable('helloWorld')().subscribe(result => {
+  console.log(result.data);
+});
+```
+
+<!-- Integrating Firebase Functions with Angular involves importing the Firebase module and initializing it in your Angular application. The AngularFire library simplifies calling Firebase Functions and handling responses. You can update the UI based on the responses received from the functions. -->
+
+
+---
+
+# Q&A
+
+
